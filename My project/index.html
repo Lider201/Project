@@ -4,33 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music of the day</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <section>
         <h1>Music of the day</h1>
-        <img src="..." alt="Image of the track">
-        <h3>Name of track</h3>
-        <h4>Performer</h4>
+        <div class="search">
+            <form action="" method="get">
+                <input name="s" placeholder="Search...">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <section>
+            <div class="player featured">
+                <img class="track-image" src="/public/images/image_example.jpg" alt="Track Cover">
+                <div class="audio-controls">
+                    <h3>OZEN</h3>
+                    <h5>TENZOO, Zhanbxqq, SKYVER</h5>
+                    <audio controls>
+                        <source src="/public/trecks/example.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
     </section>
     <section>
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'My playlist')" id="defaultOpen">My playlist</button>
-            <script>
-                document.getElementById("defaultOpen").click();
-            </script>
-            <button class="tablinks" onclick="openTab(event, 'Popular')">Popular</button>
-            <button class="tablinks" onclick="openTab(event, 'May like')">May like</button>
+            <button class="tablinks" onclick="openTab(event, 'MyPlaylist')" id="defaultOpen">My playlist</button>
+            <button class="tablinks" onclick="openTab(event, 'Popular')" id="closed">Popular</button>
+            <button class="tablinks" onclick="openTab(event, 'MayLike')">May like</button>
             <button class="tablinks" onclick="openTab(event, 'Performers')">Performers</button>
         </div>
-        <div id="My playlist" class="tabcontent">
-            <h3>My playlist</h3>
-            <p>Something</p>
-        </div>
+        <div id="MyPlaylist" class="tabcontent">
         <div id="Popular" class="tabcontent">
             <h3>Popular</h3>
             <p>Something</p>
         </div>
-        <div id="May like" class="tabcontent">
+        <div id="MayLike" class="tabcontent">
             <h3>May like</h3>
             <p>Something</p>
         </div>
@@ -41,4 +51,7 @@
     </section>
 </body>
 <script src="/index.js"></script>
+<script>
+    document.getElementById("defaultOpen").click();
+</script>
 </html>
